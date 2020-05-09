@@ -1,0 +1,22 @@
+.sidenav-container {
+  height: 100%;
+}
+
+/* .hidden{
+  display:none;
+} */
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+/* @media screen  and (min-width: 768px){
+  .sidenav {
+display: none;  
+  }
+
+} */
+.userDetails{
+  display: flex;
+  flex-direction: right;
+}

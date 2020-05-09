@@ -1,0 +1,33 @@
+<div class="search-field">
+
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input type="text"
+                 placeholder="Pick one"
+                 aria-label="Number"
+                 matInput
+                 [formControl]="myControl"
+                 [(ngModel)]="Ovalue"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+      <div (dblclick)="redirect(Ovalue)">
+        <a [routerLink]="['user']"> {{Ovalue}}</a>
+        {{Ovalue}}
+        <router-outlet></router-outlet>  
+        <div class="container">
+            <h1 [appSerchDirective]="color" >hello class</h1>
+           </div>
+        </div>
+        <!-- <router-outlet></router-outlet> -->
+</div>
+
+<!-- <div>
+
+	<router-outlet></router-outlet>  
+</div>  -->
